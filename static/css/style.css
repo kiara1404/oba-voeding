@@ -1,6 +1,7 @@
 :root {
   --blauw: rgb(0, 100, 200);
   --green: rgb(0, 155, 150);
+  --light-green: rgb(13, 177, 171);
   --grijs: rgb(150,150,150);
 
 }
@@ -59,7 +60,7 @@ h1 span{
 }
 
  h1 span:hover{
-  color: var(--green);
+  color: black;
   cursor: default;
 }
 
@@ -105,7 +106,7 @@ form input[type="submit"]{
   color: #fff;
 }
 form input[type="submit"]:hover {
-  background-color: var(--light-pink);
+  background-color: var(--light-green);
   cursor: pointer;
 }
 form{
