@@ -20,7 +20,9 @@ body {
 
   font-family: 'Avenir', Arial, Helvetica, sans-serif;
 }
-
+a{
+  text-decoration: none;
+}
 main {
   padding: 2rem;
   width: 55vw;
@@ -39,6 +41,11 @@ h1{
   transition: 0.5s ease-in-out;
   width: 250px;
   transition: ease-in-out;
+
+}
+
+h1:hover{
+  cursor: pointer;
 }
 
 h1 span:nth-child(2){
@@ -61,7 +68,6 @@ h1 span{
 
  h1 span:hover{
   color: black;
-  cursor: default;
 }
 
 header > p{
@@ -129,3 +135,12 @@ main p{
   margin:  0 0 50px 10px;
 
 }
+.home{
+  display: none;
+}
+
+.active{
+  display: block;
+}
+
+

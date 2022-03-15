@@ -1,27 +1,28 @@
+const secret = '4289fec4e962a33118340c888699438d';
 const config = {
     Authorization: `Bearer ${secret}`
 };
 
-function setURL(topic) {
+export function getURL(topic) {
     const cors = 'https://cors-anywhere.herokuapp.com/';
     const endpoint = 'https://zoeken.oba.nl/api/v1/search/?q=';
     const query = 'voedingsleer';
     const key = '17a9c4d4d56a41b55abc2d3096e94be4';
-    const secret = '4289fec4e962a33118340c888699438d';
     const detail = 'default';
+    let url = ''
 
-    const url = `${cors}${endpoint}${query}&authorization=${key}&detaillevel=${detail}&output=json&refine=true`;
-
+    if (topic) {
+        url = `${cors}${endpoint}${query}%${topic}&authorization=${key}&detaillevel=${detail}&output=json&refine=true`
+    } else {
+        url = `${cors}${endpoint}${query}&authorization=${key}&detaillevel=${detail}&output=json&refine=true`;
+    }
+    return url;
 }
 
 
-async function getData(url) {
-    fetch(url, config)
-        .then(response => {
-            return response.json();
-        })
-        .catch(err => {
-            console.log(err);
-        });
-}
+export async function getData(url) {
 
+    const response = await fetch(url, config)
+    const data = await response.json()
+    return data;
+}

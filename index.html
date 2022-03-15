@@ -6,35 +6,44 @@
   <title>Developers</title>
 
   <link rel="stylesheet" href="static/css/style.css">
+  <script src="static/js/app.js" type="module"></script>
 </head>
 
 <body>
   <header>
 
+    <a href="/index.html">
     <h1>
       <span>O</span>
       <span>B</span>
       <span>A</span>
     </h1>
+    </a>
     <p>Voe<span>d</span>ing</p>
 
   </header>
 
 
   <main>
-    <h2>Vind alles over gezonde voeding!</h2>
-    <p>De Openbare Bibliotheek van Amsterdam heeft verschillende bronnen over de voedselleer, deze applicatie zorgt ervoor
-      dat jij deze kan vinden.</p>
-    <form>
-      <input type="text" placeholder="bijv. kookboeken" id="zoekveld">
-      <input type="submit" value="Zoek" id="zoek">
-    </form>
+    <section class="home" data-route="home">
+      <h2>Vind alles over gezonde voeding!</h2>
+      <p>De Openbare Bibliotheek van Amsterdam heeft verschillende bronnen over de voedselleer, deze applicatie zorgt
+        ervoor
+        dat jij deze kan vinden.</p>
+      <form>
+        <input type="text" placeholder="bijv. kookboeken" id="zoekveld">
+        <input type="submit" value="Zoek" id="zoek">
+      </form>
+    </section>
 
+    <section class="markup" data-route="markup">
+
+    </section>
 
 
   </main>
 
-  <script src="static/js/app.js"></script>
+
 </body>
 
 </html>
