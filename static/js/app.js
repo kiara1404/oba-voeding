@@ -3,10 +3,11 @@ const main = document.querySelector('main');
 const cors = 'https://cors-anywhere.herokuapp.com/';
 const endpoint = 'https://zoeken.oba.nl/api/v1/search/?q=';
 const query = 'voedingsleer';
-const key = '1e19898c87464e239192c8bfe422f280';
+const key = '17a9c4d4d56a41b55abc2d3096e94be4';
 const secret = '4289fec4e962a33118340c888699438d';
-const detail = 'Default';
-const url = `${cors}${endpoint}${query}&authorization=${key}&detaillevel=${detail}&output=json`;
+const detail = 'default';
+const topic = ''
+const url = `${cors}${endpoint}${query}&authorization=${key}&detaillevel=${detail}&output=json&refine=true`;
 
 const config = {
   Authorization: `Bearer ${secret}`
@@ -18,14 +19,15 @@ fetch(url, config)
     return response.json();
   })
   .then(data => {
-    render(data);
-    localStorage.setItem('data', JSON.stringify(data));
+    console.log(data);
+    //render(data)
+    //   //localStorage.setItem('data', JSON.stringify(data));
   })
   .catch(err => {
     console.log(err);
-    if (localStorage.getItem('data')) {
-      render(JSON.parse(localStorage.getItem('data')));
-    }
+    // if (localStorage.getItem('data')) {
+    //   render(JSON.parse(localStorage.getItem('data')));
+    // }
   })
 
 function render(data) {

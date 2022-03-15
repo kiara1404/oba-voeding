@@ -29,14 +29,15 @@ h1{
   text-transform: lowercase;
   font-size: 8em;
   color: white;
-  margin-top: 25px;
+  margin-top: 60px;
   padding: 0;
   transition: 0.5s ease-in-out;
   width: 250px;
+  transition: ease-in-out;
 }
 
 h1 span:nth-child(2){
-  font-size: 1.2em;
+  font-size: 1.3em;
   margin: 0 0 0 -0.3em;
   padding: 0;
 }
@@ -49,6 +50,9 @@ h1 span:nth-child(3){
   padding: 0;
 }
 
+h1 span{
+   transition: 0.3s ease-in
+}
 
  h1 span:hover{
   color: #000
