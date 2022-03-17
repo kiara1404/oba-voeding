@@ -8,7 +8,7 @@ export function handleRoutes() {
     routie(
         {
             '': updateUI('home'),
-            
+
             'search/:topic': topic => {
                 let topicURL = getURL(topic)
                 console.log(topicURL)
