@@ -1,13 +1,14 @@
 export function render(data, topic) {
   const markup = document.querySelector('.markup')
+  const titleResults = ` <h2> Resultaten voor <span>${topic}</span> </h2>`
+  markup.insertAdjacentHTML("afterbegin", titleResults);
   const results = data.results;
   console.dir(results);
   results.forEach((item, i) => {
     const html = `
         <section>
-        <h2> Resultaten voor <span>${topic}</span> </h2>
             <article>
-              <h2>${item.titles[0]}</h2>
+              <h3>${item.titles[0]}</h3>
               <p>${item.summaries ? item.summaries[0] : 'Geen samenvatting'}</p>
               <img src="${
       item.coverimages ? item.coverimages[1] : 'Geen samenvatting'
@@ -15,7 +16,8 @@ export function render(data, topic) {
             </article>
           </section>
           `;
-    markup.insertAdjacentHTML('beforeend', html);
+    markup.insertAdjacentHTML('beforeend', html)
+    
   });
 }
 

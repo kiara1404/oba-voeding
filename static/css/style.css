@@ -167,8 +167,32 @@ main p{
   flex-wrap: nowrap;
     overflow: scroll;
 }
-.discover article h2{
+
+.discover-container article{
+  width: 30%;
+}
+.discover-container h2{
   font-size: 1em;
+  width: 600px;
 }
 
+.markup {
+  width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
 
+.markup section{
+  width: 50%;
+}
+.markup h2 {
+  font-size: 1.5em
+}
+.markup h2 span {
+font-style: italic;
+color: var(--green);
+}
+.markup h3{
+ font-size: 2em;
+}

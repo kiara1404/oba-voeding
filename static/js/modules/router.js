@@ -1,5 +1,5 @@
 import './vendor/routie.min.js'
-import { updateUI } from './ui.js'
+import { updateUI, deleteResults } from './ui.js'
 import { render, renderHome } from './render.js'
 import { getURL, getData } from './getData.js'
 
@@ -9,6 +9,7 @@ export function handleRoutes() {
         {
             '': () => {
                 updateUI('home')
+                deleteResults()
                let url =  getURL()
                 getData(url).then(data => {
                     renderHome(data)
