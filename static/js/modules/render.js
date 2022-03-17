@@ -11,7 +11,6 @@ export function render(data, topic) {
         <a href=":id">
             <article>
               <h3>${item.titles[0]}</h3>
-              <p>${item.summaries ? item.summaries[0] : 'Geen samenvatting'}</p>
               <img src="${
       item.coverimages ? item.coverimages[1] : 'Geen samenvatting'
       }">
