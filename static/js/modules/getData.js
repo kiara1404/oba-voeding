@@ -4,7 +4,7 @@ const config = {
 };
 
 
-export function getURL(topic) {
+export function getURL(topic, id) {
     const cors = 'https://cors-anywhere.herokuapp.com/';
     const endpoint = 'https://zoeken.oba.nl/api/v1/search/?q=';
     const query = 'voedingsleer';
@@ -18,8 +18,9 @@ export function getURL(topic) {
         url = `${cors}${endpoint}${query}&authorization=${key}&detaillevel=${detail}&output=json&refine=true`;
     }
     return url;
+    
 }
-console.log(getURL())
+
 
 
 export async function getData(url) {
@@ -28,3 +29,18 @@ export async function getData(url) {
     const data = await response.json()
     return data;
 }
+
+export function getDataId(id){
+    const cors = 'https://cors-anywhere.herokuapp.com/';
+    const endpoint = 'https://zoeken.oba.nl/api/v1/search/?q=';
+    const query = 'voedingsleer';
+    const key = '17a9c4d4d56a41b55abc2d3096e94be4';
+    const detail = 'default';
+    let url = ''
+    id
+        ? url = `${cors}${endpoint}${id}&authorization=${key}&output=json`
+        : url = `${cors}${endpoint}${query}&authorization=${key}&detaillevel=${detail}&output=json&refine=true`
+        
+        fetch(url)
+        .then(data => console.log(id, data))
+    }

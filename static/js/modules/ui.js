@@ -15,9 +15,7 @@ export function updateUI(route) {
 
 // functie van jron https://github.com/jornveltrop/project-1-2021/blob/main/static/js/modules/ui.js
 export function deleteResults(section){
-  let items =  document.querySelectorAll(`${section}`);
+    let item = document.querySelector(`${section}`);
 
-  items.forEach(item => {
-      item.remove();
-  })
+    item.remove()
 }

@@ -9,8 +9,9 @@ export function handleRoutes() {
         {
             '': () => {
                 updateUI('home')
-                deleteResults()
-               let url =  getURL()
+               // deleteResults('markup')
+
+                let url = getURL()
                 getData(url).then(data => {
                     renderHome(data)
                 })
@@ -26,8 +27,8 @@ export function handleRoutes() {
                     render(data, topic)
                     console.log(data)
                 })
-
-            }
+                }
+            
         }
     )
 }
