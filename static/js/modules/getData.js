@@ -45,15 +45,15 @@ export async function getData(url) {
 // }
 
 export async function getId(id) {
+
     const cors = 'https://cors-anywhere.herokuapp.com/';
     const endpoint = 'https://zoeken.oba.nl/api/v1/details/?id=';
     const key = '8854ebaac6d5b76ab5a25a372d249680';
-
+    // hulp van Jorn
     let url = `${cors}${endpoint}${id}&authorization=${key}&output=json`;
 
     const response = await fetch(url, config)
     const data = await response.json()
-    console.log('test')
     return data;
 
 }
