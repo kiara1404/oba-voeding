@@ -52,7 +52,9 @@ export function renderDetails(data) {
           <p>${data.record.year}</p>
           <p>${data.record.summaries ? data.record.summaries[0] : 'Geen samenvatting'}</p>
           </div>
-        <img src="${data.record.coverimages[1]}">
+          <div>
+         <img src="${data.record.coverimages[1]}">
+        </div<
     
       </article>  
 

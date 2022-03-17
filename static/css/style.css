@@ -222,13 +222,14 @@ color: var(--green);
 }
 
 .detail {
-  width: 50vw;
+  width: 80vw;
   display: flex;
   margin: 0 auto;
 }
 
 .detail h2{
-  font-size: 2em;
+  font-size: 1.5em;
+  width: 100%;
 }
 
 .detail p:nth-child(4){
@@ -245,4 +246,6 @@ color: var(--green);
 }
 .detail img {
   width: 300px;
+  display: block;
+  margin: 0 auto;
 }
