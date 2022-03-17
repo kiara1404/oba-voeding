@@ -43,7 +43,10 @@ export function handleRoutes() {
                 getId(id).then(data => {console.log(data)
                     updateUI('list')
                     deleteResults('item-list')
-                    deleteTitle()
+                    if(document.querySelector('.results h2')){
+                        deleteTitle()
+                    }
+                    
                 renderDetails(data)}
 
                 )
