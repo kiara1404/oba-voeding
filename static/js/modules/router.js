@@ -1,21 +1,28 @@
 import './vendor/routie.min.js'
 import { updateUI } from './ui.js'
-import { render } from './render.js'
+import { render, renderHome } from './render.js'
 import { getURL, getData } from './getData.js'
 
 export function handleRoutes() {
 
     routie(
         {
-            '': updateUI('home'),
+            '': () => {
+                updateUI('home')
+               let url =  getURL()
+                getData(url).then(data => {
+                    renderHome(data)
+                })
+
+            },
 
             'search/:topic': topic => {
                 let topicURL = getURL(topic)
-                console.log(topicURL)
+                console.log(topic)
 
                 getData(topicURL).then(data => {
                     updateUI('markup')
-                    render(data)
+                    render(data, topic)
                     console.log(data)
                 })
 

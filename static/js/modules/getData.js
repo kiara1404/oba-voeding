@@ -3,6 +3,7 @@ const config = {
     Authorization: `Bearer ${secret}`
 };
 
+
 export function getURL(topic) {
     const cors = 'https://cors-anywhere.herokuapp.com/';
     const endpoint = 'https://zoeken.oba.nl/api/v1/search/?q=';
@@ -18,6 +19,7 @@ export function getURL(topic) {
     }
     return url;
 }
+console.log(getURL())
 
 
 export async function getData(url) {

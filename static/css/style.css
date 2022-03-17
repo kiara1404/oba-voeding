@@ -24,10 +24,11 @@ a{
   text-decoration: none;
 }
 main {
-  padding: 2rem;
-  width: 55vw;
+
+  width: 100vw;
   margin: 0 auto;
 }
+
 header {
   height: 180px;
 }
@@ -89,7 +90,10 @@ p span{
   transition: 0.5s ease-in;
 
 }
-
+.search-section{
+  width: 55vw;
+  margin: 0 auto;
+}
 form input[type="text"] {
   width: 70%;
   height: 6vh;
@@ -141,6 +145,30 @@ main p{
 
 .active{
   display: block;
+}
+
+.discover {
+  background-color: var(--green);
+  width: 100vw;
+  padding: 20px;
+  margin-top: 12em;
+  height: 80vh;
+
+}
+
+.discover h2, .discover p{
+  margin: 0 auto;
+  width: 55vw;
+  padding: 10px;
+
+}
+.discover-container{
+  display: flex;
+  flex-wrap: nowrap;
+    overflow: scroll;
+}
+.discover article h2{
+  font-size: 1em;
 }
 
 
