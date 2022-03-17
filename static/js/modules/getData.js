@@ -57,3 +57,12 @@ export async function getId(id) {
     return data;
 
 }
+
+export async function stagingAPI(url) {
+    const cors = 'https://cors-anywhere.herokuapp.com/';
+    const endpoint = 'https://zoeken.oba.nl/api/v1/search/?q=';
+    const query = 'voedingsleer';
+    const key = '17a9c4d4d56a41b55abc2d3096e94be4';
+    const detail = 'default';
+    const urlAPI = `http://obaliquid.staging.aquabrowser.nl/onderwijs/api/v1/search/?q=${query}+NOT+lom.lifecycle.contribute.publisher%3Dwikipedia&authorization=${key}&output=json`
+}

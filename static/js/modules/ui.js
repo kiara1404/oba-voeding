@@ -14,17 +14,19 @@ export function updateUI(route) {
 
 
 // functie en hulp van jron https://github.com/jornveltrop/project-1-2021/blob/main/static/js/modules/ui.js
-export function deleteResults() {
-    let itemH2 = document.querySelector('.markup h2');
-    let itemsA = document.querySelectorAll('.markup a');
+export function deleteResults(section) {
+    
+    // let itemsA = document.querySelectorAll('.markup a');
+    let items = document.querySelectorAll(`.${section}`)
+    //  itemH2.remove()
 
-    itemH2.remove()
+    items.forEach(item => item.remove())
 
-    itemsA.forEach(item => {
-        item.remove();
-    })
+    console.log('succesfully deleted', `${section}`)
 }
 
-export function sendHash(id){
-    window.location.hash = 'collectie/' + id
+export function deleteTitle(){
+     let itemH2 = document.querySelector('.results h2');
+     itemH2.remove()
+     console.log('succesfully deleted h2')
 }

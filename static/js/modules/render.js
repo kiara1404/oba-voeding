@@ -1,7 +1,5 @@
-import { sendHash } from "./ui.js";
-
 export function render(data, topic) {
-  const markup = document.querySelector('.markup')
+  const markup = document.querySelector('.results')
   const titleResults = ` <h2> Resultaten voor <span>${topic}</span> </h2>`
   markup.insertAdjacentHTML("afterbegin", titleResults);
 
@@ -10,6 +8,7 @@ export function render(data, topic) {
   console.dir(results);
   results.forEach((item, i) => {
     const html = `
+      <section data-route="item-list" class="item-list">
         <a href="#collectie/${item.id}">
             <article>
               <h3>${item.titles[0]}</h3>
@@ -27,29 +26,37 @@ export function render(data, topic) {
 export function renderHome(data) {
   const markup = document.querySelector('.discover-container')
   const results = data.results;
-  results.forEach((item, i) => {
+  results.forEach((item) => {
     const html = `
+          <a href="#collectie/${item.id}">
             <article>
               <h2>${item.titles[0]}</h2>
               <img src="${
       item.coverimages ? item.coverimages[1] : 'Geen samenvatting'
       }">
             </article>
+          </a>
           `;
     markup.insertAdjacentHTML('beforeend', html);
   });
 
 }
 
-export function getIdFromItem() {
-  let allItems = document.querySelectorAll(`.markup a`);
+export function renderDetails(data) {
+  const markup = document.querySelector('.list')
+  const html = `
+      <article class="detail" data-route="detail">
+        <div>
+          <h2>${data.record.titles[0]}</h2>
+          <p>${data.record.authors}<p>
+          <p>${data.record.year}</p>
+          <p>${data.record.summaries ? data.record.summaries[0] : 'Geen samenvatting'}</p>
+          </div>
+        <img src="${data.record.coverimages[1]}">
+    
+      </article>  
 
-  allItems.forEach(function (item) {
-    item.addEventListener("click", function () {
-      let id = this.id;
-      console.log(this.id)
-      sendHash();
-      routie(`${item.id}`);
-    });
-  });
+
+  `
+  markup.insertAdjacentHTML('beforeend', html);
 }

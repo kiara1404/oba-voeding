@@ -186,32 +186,61 @@ main p{
   display: block;
   margin: 10px auto;
   width: 160px;
-}
 
-.markup {
+}
+.results {
   width: 80vw;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   margin-top: 6em;
 }
-
-.markup a{
+.results section{
+width: 350px;
+margin-right: 80px ;
+}
+.results a{
   width: 50%;
   text-decoration: none;
   color: #000;
 }
-.markup h2 {
+.results h2 {
   font-size: 1.2em;
 }
-.markup h2 span {
+.results h2 span {
 font-style: italic;
 color: var(--green);
 }
-.markup h3{
+.results h3{
  font-size: 1.5em;
  white-space: nowrap;
  overflow: hidden;
- width: 450px;
+ width: 350px;
  text-overflow: ellipsis;
+}
+
+.detail {
+  width: 50vw;
+  display: flex;
+  margin: 0 auto;
+}
+
+.detail h2{
+  font-size: 2em;
+}
+
+.detail p:nth-child(4){
+  font-size: 1em;
+  margin-top: -40px;
+}
+
+.detail p {
+  width: 100%;
+}
+.detail div{
+  width: 50%;
+  margin: 30px;
+}
+.detail img {
+  width: 300px;
 }

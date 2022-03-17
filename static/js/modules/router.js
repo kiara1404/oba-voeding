@@ -1,6 +1,6 @@
 import './vendor/routie.min.js'
-import { updateUI, deleteResults } from './ui.js'
-import { render, renderHome, getIdFromItem } from './render.js'
+import { updateUI, deleteResults, deleteTitle } from './ui.js'
+import { render, renderHome, renderDetails } from './render.js'
 import { getURL, getData, getId } from './getData.js'
 
 export function handleRoutes() {
@@ -9,7 +9,8 @@ export function handleRoutes() {
         {
             '': () => {
                 updateUI('home')
-                deleteResults();
+                deleteResults('item-list');
+                deleteResults('detail')
                // getIdFromItem()
 
 
@@ -22,19 +23,31 @@ export function handleRoutes() {
 
             },
 
-            'search/:topic': topic => {
+            'search/:topic': 
+            
+            topic => {
                 let topicURL = getURL(topic)
                 console.log(topic)
+                
 
                 getData(topicURL).then(data => {
-                    updateUI('markup')
+                    updateUI('results')
+                    deleteResults('detail')
+                    
+                    
                     render(data, topic)
                     console.log(data)
                 })
             },
             'collectie/:id': id => {
-                getId(id).then(console.log(id)
+                getId(id).then(data => {console.log(data)
+                    updateUI('list')
+                    deleteResults('item-list')
+                    deleteTitle()
+                renderDetails(data)}
+
                 )
+                
             }
 
         }
