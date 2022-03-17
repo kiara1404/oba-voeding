@@ -24,3 +24,7 @@ export function deleteResults() {
         item.remove();
     })
 }
+
+export function sendHash(id){
+    window.location.hash = 'collectie/' + id
+}

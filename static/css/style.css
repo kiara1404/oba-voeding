@@ -212,6 +212,6 @@ color: var(--green);
  font-size: 1.5em;
  white-space: nowrap;
  overflow: hidden;
- width: 500px;
+ width: 450px;
  text-overflow: ellipsis;
 }
