@@ -67,7 +67,9 @@ h1 span:nth-child(3){
 h1 span{
    transition: 0.2s ease-in
 }
-
+h1 span:nth-child(3):hover {
+  transform: rotate(-90deg);
+}
  h1 span:hover{
   color: black;
 }
