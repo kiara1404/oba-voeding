@@ -1,7 +1,7 @@
 import './vendor/routie.min.js'
 import { updateUI, deleteResults, deleteTitle, goBack, showBackBtn, deleteBackBtn } from './ui.js'
-import { render, renderHome, renderDetails } from './render.js'
-import { getURL, getData, getId } from './getData.js'
+import { render, renderHome, renderDetails,renderStagingAPI } from './render.js'
+import { getURL, getData, getId, stagingAPI, getStagingURL, getStagingId } from './getData.js'
 
 export function handleRoutes() {
 
@@ -15,60 +15,69 @@ export function handleRoutes() {
                 if (document.querySelector('.results h2')) {
                     deleteTitle()
                 }
-                
-               // getIdFromItem()
 
+                // getIdFromItem()
 
-                let url = getURL()
-                getData(url).then(data => {
-
+                let url = getStagingURL()
+                stagingAPI(url).then(data => {
                     console.log(data)
                     renderHome(data)
                 })
 
             },
 
-            'search/:topic': 
-            
-            topic => {
-                let topicURL = getURL(topic)
-                console.log(topic)
-                
+            'search/:topic':
 
-                getData(topicURL).then(data => {
-                    updateUI('results')
-                    deleteResults('detail')
-                    goBack()
-                    showBackBtn()
+                topic => {
+                    let topicURL = getURL(topic)
+                    let stagingTopic = getStagingURL(topic)
+                    console.log(topicURL)
 
-                    
-                    
-                    render(data, topic)
-                    console.log(data)
-                })
-            },
+                    getData(topicURL).then(data =>{
+                            updateUI('results')
+                            deleteResults('detail')
+                            goBack()
+                            showBackBtn()
+                            render(data, topic)
+                        })
+                             
+                         stagingAPI(stagingTopic).then(data => {
+                        updateUI('results')
+                        deleteResults('detail')
+                        goBack()
+                        showBackBtn()
+                        renderStagingAPI(data)
+                    })
+                },
             'collectie/:id': id => {
-                getId(id).then(data => {console.log(data)
+                getId(id).then(data => {
+                    console.log(data)
                     updateUI('list')
                     deleteResults('item-list')
-                    
-                    if(document.querySelector('.results h2')){
+
+                    if (document.querySelector('.results h2')) {
                         deleteTitle()
                     }
                     goBack()
                     showBackBtn()
 
-                    
-                renderDetails(data)}
+
+                    renderDetails(data)
+                }
 
                 )
-                
+
+            },
+            'collectie/artikelen/:id': id => {
+                getStagingId(id).then(data => {
+                    console.log(data)
+                })
             }
 
         }
     )
 }
-
+// Hulp & functie van Jorn
 function searchField(event) {
     event.preventDefault();
 

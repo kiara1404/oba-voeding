@@ -13,8 +13,27 @@ export function render(data, topic) {
             <article>
               <h3>${item.titles[0]}</h3>
               <img src="${
-      item.coverimages ? item.coverimages[1] : 'Geen samenvatting'
+      item.coverimages ? item.coverimages[1] : ''
       }">
+            </article>
+          </a>
+          `;
+    markup.insertAdjacentHTML('beforeend', html)
+
+  });
+}
+export function renderStagingAPI(data){
+  const markup = document.querySelector('.results')
+
+  const results = data.results;
+  console.dir(results);
+  results.forEach((item, i) => {
+    const html = `
+      <section data-route="item-list" class="item-list">
+        <a href="#collectie/${item.id}">
+            <article>
+              <h3>${item.titles[0]}</h3>
+              <img src="https://шпаковскаярб.рф/images/no_photo.png" class="no-photo  ">
             </article>
           </a>
           `;
@@ -28,12 +47,14 @@ export function renderHome(data) {
   const results = data.results;
   results.forEach((item) => {
     const html = `
-          <a href="#collectie/${item.id}">
+          <a href="#collectie/artikelen/${item.id}">
             <article>
               <h2>${item.titles[0]}</h2>
-              <img src="${
-      item.coverimages ? item.coverimages[1] : 'Geen samenvatting'
-      }">
+              <ul>
+              <li>${item.authors}</li>
+                <li>${item.publisher}</li>
+                </ul>
+              <p>${item.summaries}</p>
             </article>
           </a>
           `;

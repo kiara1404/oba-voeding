@@ -182,7 +182,7 @@ main p{
 
 }
 
-.discover h2, .discover p{
+.discover h2, .discover > p{
   margin: 0 auto;
   width: 55vw;
   padding: 10px;
@@ -192,25 +192,38 @@ main p{
   display: flex;
   flex-wrap: nowrap;
     overflow: scroll;
+    margin-top: 40px;
 }
 
 .discover-container article{
-  width: 30%;
+  width: 500px;
+  margin: 40px;
 }
 .discover-container h2{
-  font-size: 1.2em;
-  width: 300px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-size: 1.5em;
+  width: 500px;
   margin-top: 20px;
 }
 
-.discover-container img{
-  display: block;
-  margin: 10px auto;
-  width: 160px;
+.discover-container p {
+  width: 500px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  padding: 0;
+}
 
+.discover-container ul {
+  margin-bottom: 20px;
+}
+.discover-container ul li {
+  list-style: none;
+  color: #000;
+  font-style: italic;
+  font-size: 1em;
+  margin-left: -20px;
+  
 }
 .results {
   width: 80vw;
@@ -253,6 +266,9 @@ color: var(--green);
  text-overflow: ellipsis;
  z-index: 99;
 
+}
+.no-photo{
+  width: 200px;
 }
 
 .detail {
