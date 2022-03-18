@@ -257,6 +257,7 @@ margin-right: 80px ;
 }
 .results h2 {
   font-size: 1.2em;
+  width: 100vw;
 }
 
 .results h3::after {
