@@ -47,7 +47,13 @@ Om de applicatie te kunnen gebruiken, moet je gebruik maken van een live server
 
 <!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
 ### Checklist ✅
-Doordat de applicatie binnen één week gebouwd is, zitten er nog veel schoonheidsfoutjes in. Ook heb ik een lijstje wat ik graag not had willen toevoegen.
+Doordat de applicatie binnen één week gebouwd is, zitten er nog veel schoonheidsfoutjes in. Ook heb ik een lijstje wat ik graag nog had willen toevoegen maar helaas niet gelukt is door tijdgebrek;
+
+* Het kunnen opslaan van bronnen    
+* Een filter op de resultaten pagina
+* Het kunnen navigeren door alle resultaten van de API's. De API's laten alleen de eerste 20 resultaten zien, ik had graag knoppen toegevoegd die dit hadde kunnen doen.
+* shuffle van de artikelen op de homepage.
+
 
 <!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
 ### License ©
