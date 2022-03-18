@@ -49,6 +49,8 @@ Om de applicatie te kunnen gebruiken, moet je gebruik maken van een live server
 ### Checklist ✅
 Doordat de applicatie binnen één week gebouwd is, zitten er nog veel schoonheidsfoutjes in. Ook heb ik een lijstje wat ik graag nog had willen toevoegen maar helaas niet gelukt is door tijdgebrek;
 
+* Error state
+* Loading state
 * Het kunnen opslaan van bronnen    
 * Een filter op de resultaten pagina
 * Het kunnen navigeren door alle resultaten van de API's. De API's laten alleen de eerste 20 resultaten zien, ik had graag knoppen toegevoegd die dit hadde kunnen doen.
