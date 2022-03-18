@@ -1,5 +1,8 @@
 # OBA voeding 🍓🥬
-OBA voeding is een aftakking van de OBA. (Openbare Bibliotheek Amsterdam). Binnen deze applicatie kan door je allerlei verschillende bronnen zoeken over gezonde voeding.
+OBA voeding is een aftakking van de OBA. (Openbare Bibliotheek Amsterdam). Binnen deze applicatie kan door je allerlei verschillende bronnen zoeken over gezonde voeding die de OBA in hun archief heeft.  
+
+
+
 <img src="img/landingspage.png" width="800px">
 
 ### User story
@@ -14,20 +17,19 @@ Ik heb een op voeding en voedingsleer gezocht op de website en daar zag ik een a
 * Chinese voedingsleer 
 etc.
 
-Dus ik heb besloten om in deze SPA een zoekfunctie binnen de query 'voedingsleer' te maken zodat gebruikers zelf kunnen zoeken. Zoals bijvoorbeeld `kookboeken` of `hormonen`
+Doordat er zoveel verschillende interessanten invalshoeken bestaan over gezonde voeding, heb ik heb besloten om in deze SPA een zoekfunctie binnen de query 'voedingsleer' te maken zodat gebruikers zelf kunnen zoeken. Zoals bijvoorbeeld `kookboeken` of `hormonen`.
 
 
 <!-- als gebruiker X wil ik graag Y zodat ik Z kan bereiken -->
 
 <!-- Add a link to your live demo in Github Pages -->
 ### Live demo 🌐
-<!-- ☝️ replace this description with a description of your own work -->
 
-<!-- replace the code in the /docs folder with your own, so you can showcase your work with GitHub Pages 🌍 -->
+<img src="img/landingspage.png" width="300px">
+<img src="img/Screenshot 2022-03-18 at 11.31.44.png" width="300px">
+<img src="img/Screenshot 2022-03-18 at 11.31.53.png" width="300px">
 
-<!-- Add a nice poster image here at the end of the week, showing off your shiny frontend 📸 -->
 
-<!-- Maybe a table of contents here? 📚 -->
 
 <!-- How about a section that describes how to install this project? 🤓 -->
 ### Installation ⚙️
@@ -40,3 +42,5 @@ Dus ik heb besloten om in deze SPA een zoekfunctie binnen de query 'voedingsleer
 <!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
 ### License ©
 [MIT LICENSE ]()
+
+Het maken van de applicatie was een project één week van de minor web design & web development van de opleiding CMD van de Hogeschool van Amsterdam.
