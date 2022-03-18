@@ -193,10 +193,12 @@ main p{
   flex-wrap: nowrap;
     overflow: scroll;
     margin-top: 40px;
+
 }
 
 .discover-container article{
-  width: 500px;
+  width: 550px;
+  height: 200px;
   margin: 40px;
 }
 .discover-container h2{
@@ -204,6 +206,17 @@ main p{
   width: 500px;
   margin-top: 20px;
 }
+
+.discover-container h2::after{
+    content: "";
+  display: block;
+  width: 450px;
+  height: 3px;
+  background-color: #fff;
+ z-index: -999;
+ margin-top: 5px;
+}
+
 
 .discover-container p {
   width: 500px;
