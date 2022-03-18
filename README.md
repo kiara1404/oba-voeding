@@ -36,7 +36,7 @@ De applicatie staat live op mijn github pages, alleen werkt één van de twee AP
 
 #### Clone this repository
 ```
-git clone https://github.com/kiara1404/css-to-the-rescue
+git clone https://github.com/kiara1404/project-1-2021
 ```
 
 #### Run the application
