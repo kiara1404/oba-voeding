@@ -1,6 +1,6 @@
 # OBA voeding 🍓🥬
 OBA voeding is een aftakking van de OBA. (Openbare Bibliotheek Amsterdam). Binnen deze applicatie kan door je allerlei verschillende bronnen zoeken over gezonde voeding.
-<img src="img/landingspage.png" width="400px">
+<img src="img/landingspage.png" width="800px">
 
 ### User story
 Voor dit project heb ik de onderstaande user story gekozen;
