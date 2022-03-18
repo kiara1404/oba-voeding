@@ -27,7 +27,7 @@ Doordat er zoveel verschillende interessanten invalshoeken bestaan over gezonde 
 De applicatie staat live op mijn github pages, alleen werkt één van de twee API's helaas niet. Die werkt alleen wanneer je lokaal op je localhost draait.
 [Live website](https://kiara1404.github.io/project-1-2021/)
 #### Screen shots
-<img src="img/Screenshot 2022-03-18 at 11.31.44.png" width="800px">
+<img src="img/Screenshot 2022-03-18 at 11.56.57" width="800px">
 <img src="img/Screenshot 2022-03-18 at 11.31.53.png" width="800px">
 
 
