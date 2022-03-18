@@ -30,3 +30,22 @@ export function deleteTitle(){
      itemH2.remove()
      console.log('succesfully deleted h2')
 }
+
+export function goBack() {
+    const backBtn = document.querySelector('.goBack')
+
+    backBtn.addEventListener('click', () => {
+        history.back()
+        
+    })
+}
+
+export function showBackBtn(){
+    const backBtn = document.querySelector('.goBack')
+    backBtn.classList.add('active')
+}
+
+export function deleteBackBtn(){
+    const backBtn = document.querySelector('.goBack')
+    backBtn.classList.remove('active')
+}

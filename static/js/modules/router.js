@@ -1,5 +1,5 @@
 import './vendor/routie.min.js'
-import { updateUI, deleteResults, deleteTitle } from './ui.js'
+import { updateUI, deleteResults, deleteTitle, goBack, showBackBtn, deleteBackBtn } from './ui.js'
 import { render, renderHome, renderDetails } from './render.js'
 import { getURL, getData, getId } from './getData.js'
 
@@ -9,8 +9,13 @@ export function handleRoutes() {
         {
             '': () => {
                 updateUI('home')
+                deleteBackBtn()
                 deleteResults('item-list');
-                deleteResults('detail')
+                deleteResults('detail');
+                if (document.querySelector('.results h2')) {
+                    deleteTitle()
+                }
+                
                // getIdFromItem()
 
 
@@ -33,6 +38,9 @@ export function handleRoutes() {
                 getData(topicURL).then(data => {
                     updateUI('results')
                     deleteResults('detail')
+                    goBack()
+                    showBackBtn()
+
                     
                     
                     render(data, topic)
@@ -43,9 +51,13 @@ export function handleRoutes() {
                 getId(id).then(data => {console.log(data)
                     updateUI('list')
                     deleteResults('item-list')
+                    
                     if(document.querySelector('.results h2')){
                         deleteTitle()
                     }
+                    goBack()
+                    showBackBtn()
+
                     
                 renderDetails(data)}
 
