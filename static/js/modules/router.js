@@ -1,6 +1,6 @@
 import './vendor/routie.min.js'
 import { updateUI, deleteResults, deleteTitle, goBack, showBackBtn, deleteBackBtn } from './ui.js'
-import { render, renderHome, renderDetails,renderStagingAPI } from './render.js'
+import { render, renderHome, renderDetails, renderStagingAPI } from './render.js'
 import { getURL, getData, getId, stagingAPI, getStagingURL, getStagingId } from './getData.js'
 
 export function handleRoutes() {
@@ -33,15 +33,15 @@ export function handleRoutes() {
                     let stagingTopic = getStagingURL(topic)
                     console.log(topicURL)
 
-                    getData(topicURL).then(data =>{
-                            updateUI('results')
-                            deleteResults('detail')
-                            goBack()
-                            showBackBtn()
-                            render(data, topic)
-                        })
-                             
-                         stagingAPI(stagingTopic).then(data => {
+                    getData(topicURL).then(data => {
+                        updateUI('results')
+                        deleteResults('detail')
+                        showBackBtn()
+                        goBack()
+                        render(data, topic)
+                    })
+
+                    stagingAPI(stagingTopic).then(data => {
                         updateUI('results')
                         renderStagingAPI(data)
                     })

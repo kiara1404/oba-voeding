@@ -1,7 +1,6 @@
-# Project 1 @cmda-minor-web · 2022
-
-## Opdrachtomschrijving
-Binnen het OBA thema leven lang leren willen we de Amsterdammers van zoveel mogelijk bronnen voorzien om informeel te kunnen (blijven) leren. Naast de informatieve boeken, cursussen, videos enzovoort hebben we als nieuwe bron: open leermaterialen. Dit zijn onderzoeken en andere ondersteunende materialen op mbo/hbo/wo niveau . Deze verschillende bronnen willen we graag op thema doorzoekbaar maken en zinnig vormgegeven aanbieden aan de Amsterdammers. Aan jullie dus de opdracht om de verschillende bronnen via de api doorzoekbaar te maken, en deze voor de doelgroep volwassen, aan de hand van onderstaande thema's, vormgegeven aan te bieden.    
+# OBA voeding 🍓🥬
+OBA voeding is een aftakking van de OBA. (Openbare Bibliotheek Amsterdam). Binnen deze applicatie kan door je allerlei verschillende bronnen zoeken over gezonde voeding.
+<img src="img/landingspage.png" width="400px">
 
 ### User story
 Voor dit project heb ik de onderstaande user story gekozen;
@@ -15,7 +14,7 @@ Ik heb een op voeding en voedingsleer gezocht op de website en daar zag ik een a
 * Chinese voedingsleer 
 etc.
 
-Dus ik heb besloten om in deze SPA een zoekfunctie binnen de query 'voedingsleer' te maken zodat gebruikers zelf kunnen zoeken. Zoals bijvoorbeeld `keto` of `
+Dus ik heb besloten om in deze SPA een zoekfunctie binnen de query 'voedingsleer' te maken zodat gebruikers zelf kunnen zoeken. Zoals bijvoorbeeld `kookboeken` of `hormonen`
 
 
 <!-- als gebruiker X wil ik graag Y zodat ik Z kan bereiken -->
