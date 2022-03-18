@@ -43,9 +43,6 @@ export function handleRoutes() {
                              
                          stagingAPI(stagingTopic).then(data => {
                         updateUI('results')
-                        deleteResults('detail')
-                        goBack()
-                        showBackBtn()
                         renderStagingAPI(data)
                     })
                 },
