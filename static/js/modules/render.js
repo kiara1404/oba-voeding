@@ -30,7 +30,7 @@ export function renderStagingAPI(data){
   results.forEach((item, i) => {
     const html = `
       <section data-route="item-list" class="item-list">
-        <a href="#collectie/${item.id}">
+        <a href="${item.detailLink}" target="_blank">
             <article>
               <h3>${item.titles[0]}</h3>
               <img src="https://шпаковскаярб.рф/images/no_photo.png" class="no-photo  ">
@@ -47,7 +47,7 @@ export function renderHome(data) {
   const results = data.results;
   results.forEach((item) => {
     const html = `
-          <a href="#collectie/artikelen/${item.id}">
+          <a href="${item.detailLink}" target="_blank">
             <article>
               <h2>${item.titles[0]}</h2>
               <ul>
