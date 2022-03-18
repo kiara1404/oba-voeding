@@ -24,20 +24,30 @@ Doordat er zoveel verschillende interessanten invalshoeken bestaan over gezonde 
 
 <!-- Add a link to your live demo in Github Pages -->
 ### Live demo 🌐
+De applicatie staat live op mijn github pages, alleen werkt één van de twee API's helaas niet. Die werkt alleen wanneer je lokaal op je localhost draait.
+[Live website](https://kiara1404.github.io/project-1-2021/)
+#### Screen shots
+<img src="img/Screenshot 2022-03-18 at 11.31.44.png" width="500px">
+<img src="img/Screenshot 2022-03-18 at 11.31.53.png" width="500px">
 
-<img src="img/landingspage.png" width="300px">
-<img src="img/Screenshot 2022-03-18 at 11.31.44.png" width="300px">
-<img src="img/Screenshot 2022-03-18 at 11.31.53.png" width="300px">
 
 
-
-<!-- How about a section that describes how to install this project? 🤓 -->
 ### Installation ⚙️
 
+#### Clone this repository
+```
+git clone https://github.com/kiara1404/css-to-the-rescue
+```
+
+#### Run the application
+```
+Om de applicatie te kunnen gebruiken, moet je gebruik maken van een live server
+```
 <!-- ...but how does one use this project? What are its features 🤔 -->
 
 <!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
 ### Checklist ✅
+Doordat de applicatie binnen één week gebouwd is, zitten er nog veel schoonheidsfoutjes in. Ook heb ik een lijstje wat ik graag not had willen toevoegen.
 
 <!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
 ### License ©
